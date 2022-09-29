@@ -1,11 +1,22 @@
-import { useState } from 'react'
+import React, {useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const [numbers, setNumbers] = useState([])
+  const [starts, setStars] = useState([])
+  
+  const generateRandomNumbers = () => {
+    setNumbers(Array(5).fill().map(() => Math.floor(Math.random() * 49 + 1)))
+  }
+
+  const generateRandomStars = () => {
+    setStars(Array(2).fill().map(() => Math.floor(Math.random() * 9 + 1)))
+  }
+  
+  // console.log(numbers)
   return (
     <div className="App">
       <div>
@@ -16,17 +27,18 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>EuroMillions Generator</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => {generateRandomNumbers(), generateRandomStars()}}>
+          Generate
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Numbers : {numbers.join(', ')} <br />
+          Stars : {starts.join(', ')}
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        I hope this website will help you to win the lottery!
       </p>
     </div>
   )
