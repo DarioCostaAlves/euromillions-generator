@@ -19,8 +19,7 @@ function App() {
 
   const generate = () => {
     randomNumbers.push(genNum);
-    randomStars.push(genStar);
-    console.time();
+    randomStars.push(genStar);    
 
     //4 random numbers 
     for (let counter = 0; counter < 4; counter++) {
@@ -39,9 +38,7 @@ function App() {
         newGen = Math.floor(Math.random() * 9 + 1);
       }
       randomStars.push(newGen);
-    }
-    console.timeEnd();
-    console.log(randomNumbers);
+    }        
     setNumbers(randomNumbers);
     setStars(randomStars);
   };
