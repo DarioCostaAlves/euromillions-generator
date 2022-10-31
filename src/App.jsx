@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import reactLogo from './assets/react.svg'
+import euroLogo from './assets/euro.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
@@ -52,7 +52,7 @@ function App() {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={euroLogo} className="logo react" alt="React logo" />
         </a>
       </div>
       <h1>EuroMillions Generator</h1>
